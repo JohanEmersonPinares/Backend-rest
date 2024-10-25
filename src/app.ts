@@ -3,7 +3,6 @@ import cors from "cors";
 import foodRouter from "../routes/foodRoute";
 import userRouter from "../routes/userRoute";
 import "dotenv/config";
-import cartRouter from "../routes/cartRoute";
 
 const app = express();
 
@@ -12,6 +11,5 @@ app.use(express.json());
 app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
-app.use("/api/cart", cartRouter)
 
 export default app;
